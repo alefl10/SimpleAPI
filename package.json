@@ -1,0 +1,35 @@
+{
+  "name": "api-practice",
+  "version": "1.0.0",
+  "description": "BackEnd code based on a Lynda.com tutorial for practice purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js --exec babel-node -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alefl10/SimpleAPI.git"
+  },
+  "author": "Alejandro Ferrero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alefl10/SimpleAPI/issues"
+  },
+  "homepage": "https://github.com/alefl10/SimpleAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1"
+  }
+}
