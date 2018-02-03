@@ -1,5 +1,12 @@
 const _ = require('lodash');
 
+exports.getOne = (req, res) => {
+  const {
+    contact,
+  } = req;
+  res.json(contact);
+};
+
 exports.get = (req, res) => {
   const {
     contacts,

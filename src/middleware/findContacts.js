@@ -13,3 +13,20 @@ exports.findContacts = function () {
       });
   };
 };
+
+exports.findOne = function () {
+  return function (req, res, next, id) {
+    Contact.findById(id)
+      .then((contact) => {
+        if (contact === undefined || contact === null) {
+          next(new Error('No Contact with that id'));
+        } else {
+          req.contact = contact;
+          next();
+        }
+      })
+      .catch((err) => {
+        next(err);
+      });
+  };
+};
