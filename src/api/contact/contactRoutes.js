@@ -1,12 +1,16 @@
 const router = require('express').Router();
+const controller = require('./contactController');
+const {
+  findContacts,
+} = require('../../middleware/findContacts');
+const {
+  saveContact,
+} = require('../../middleware/saveContact');
+
 
 router.route('/')
-  .get((req, res) => {
-    res.send('GET api/ route OK!');
-  })
-  .post((req, res) => {
-    res.send('POST api/ route OK!');
-  });
+  .get(findContacts(), controller.get)
+  .post(saveContact(), controller.post);
 
 router.route('/:id')
   .put((req, res) => {
