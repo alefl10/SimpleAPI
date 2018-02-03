@@ -1,9 +1,7 @@
 const express = require('express');
 const api = require('./api/api');
 const config = require('./config/config');
-require('mongoose').connect(config.db.url, {
-  useMongoClient: true,
-});
+require('mongoose').connect(config.db.url);
 
 const app = express();
 require('./middleware/appMiddleware.js')(app);
