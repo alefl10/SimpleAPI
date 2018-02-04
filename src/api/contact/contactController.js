@@ -1,23 +1,6 @@
-const _ = require('lodash');
-
-exports.getOne = (req, res) => {
+exports.respond = (req, res) => {
   const {
-    contact,
+    respond,
   } = req;
-  res.json(contact);
-};
-
-exports.get = (req, res) => {
-  const {
-    contacts,
-  } = req;
-  console.log('Serving found users....');
-  res.json(contacts);
-};
-
-exports.post = (req, res) => {
-  const {
-    saved,
-  } = req;
-  res.json(saved);
+  res.json(respond);
 };

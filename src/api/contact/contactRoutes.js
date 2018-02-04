@@ -3,23 +3,19 @@ const controller = require('./contactController');
 const {
   findContacts,
   findOne,
-} = require('../../middleware/findContacts');
-const {
   saveContact,
-} = require('../../middleware/saveContact');
-
+  updateContact,
+} = require('../../middleware/mongooseMiddleware');
 
 router.param('id', findOne());
 
 router.route('/')
-  .get(findContacts(), controller.get)
-  .post(saveContact(), controller.post);
+  .get(findContacts(), controller.respond)
+  .post(saveContact(), controller.respond);
 
 router.route('/:id')
-  .get(controller.getOne)
-  .put((req, res) => {
-    res.send('PUT api/ route OK!');
-  })
+  .get(findOne(), controller.respond)
+  .put(updateContact(), controller.respond)
   .delete((req, res) => {
     res.send('DELETE api/ route OK!');
   });
