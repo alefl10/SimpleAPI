@@ -5,6 +5,7 @@ const {
   findOne,
   saveContact,
   updateContact,
+  deleteContact,
 } = require('../../middleware/mongooseMiddleware');
 
 router.param('id', findOne());
@@ -16,8 +17,6 @@ router.route('/')
 router.route('/:id')
   .get(findOne(), controller.respond)
   .put(updateContact(), controller.respond)
-  .delete((req, res) => {
-    res.send('DELETE api/ route OK!');
-  });
+  .delete(deleteContact(), controller.respond);
 
 module.exports = router;
