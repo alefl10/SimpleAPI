@@ -51,8 +51,8 @@ Repository dedicated to practice API development skills based on a <https://lynd
 
 - **Requests**
     - GET
-    -PUT
-    -DELETE
+    - PUT
+    - DELETE
     
 
 ## Additional Info
