@@ -22,27 +22,29 @@ Repository dedicated to practice API development skills based on a <https://lynd
     - POST
         - Data Schema
         
-            ```
+        ```javascript
+        {
             firstName: {
-            type: String,
-            required: true,
+                type: String,
+                required: true,
             },
             lastName: {
-            type: String,
-            required: true,
+                type: String,
+                required: true,
             },
             email: {
-            type: String,
-            required: true,
+                type: String,
+                required: true,
             },
             phone: {
-            type: String,
-            required: true,
+                type: String,
+                required: true,
             },
             createdDate: {
-            type: Date,
-            default: Date.now,
+                type: Date,
+                default: Date.now,
             }
+        }
         ```
 
 2. `localhost:3000/api/contact/:id`
